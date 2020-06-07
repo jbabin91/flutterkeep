@@ -1,0 +1,2 @@
+json_key_file("./keys/api-5147711079278213413-93820-c105a9588966.json") # Path to the json secret file - Follow https://docs.fastlane.tools/actions/supply/#setup to get one
+package_name("com.awesomeapps.flutterkeep") # e.g. com.krausefx.app

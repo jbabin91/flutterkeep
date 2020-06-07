@@ -1,0 +1,11 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+  	match /{collection}/{documents=**} {
+    	allow read, create, update: if 'notes-' + request.auth.uid == collection
+    }
+    match /{document=**} {
+      allow read, write: if request.time < timestamp.date(2020, 7, 6);
+    }
+  }
+}
